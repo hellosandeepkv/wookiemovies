@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="main-header">
+    <div>
+      <h3 class="brandLabel">WOOKIE</h3>
+      <h3 class="brandLabel">MOVIES</h3>
+    </div>
+    <div>
+      <span class="search">Search</span>
+      <input type="text" (keyup.enter)="searchMovie($event.target.value)" />
+    </div>
+  </div>
+  <div *ngIf="movieTab">
+    <div *ngFor="let genere of genereKeys">
+      <span class="genre-title">{{ genere }}</span>
+      <div class="movie-list movie-title">
+        <div
+          *ngFor="let element of genereContent[genere]"
+          class="movie-cnt"
+          (click)="openContent(element)"
+        >
+          <img src="{{ element.backdrop }}" class="banner" />
+          <p>{{ element.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!movieTab" class="roboto-font">
+    <button (click)="goBack()" class="backBtn">Back</button>
+    <div class="flex">
+      <img width="400" height="400" src="{{ movieContent.backdrop }}" />
+      <div class="margin-left20">
+        <span>Title: {{ movieContent.title }} | </span>
+        <span>Rating: {{ movieContent.imdb_rating }}</span>
+        <p>
+          <span>Year: {{ movieContent.released_on | date: "d/M/y" }} | </span>
+          <span>Length: {{ movieContent.length }} | </span>
+          <span>Director: {{ movieContent.director }}</span>
+        </p>
+        <p>Cast: {{ movieContent.cast.toString() }}</p>
+        <p>Description: {{ movieContent.overview }}</p>
+      </div>
+    </div>
+  </div>
+</div>

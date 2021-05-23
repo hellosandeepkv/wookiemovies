@@ -1,0 +1,74 @@
+h3 {
+  margin: 0px;
+}
+
+.brandLabel {
+  font-family: "Farro", sans-serif;
+  font-size: 25px;
+}
+
+.main-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #363636;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner {
+  height: 250px;
+  width: 100%;
+}
+
+.movie-cnt {
+  margin: 10px;
+  cursor: pointer;
+  width: calc(25% - 20px);
+}
+
+.backBtn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.genre-title {
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: 800;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+.search,
+.movie-title {
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.roboto-font {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.search {
+  margin-right: 5px;
+}
+
+.flex {
+  display: flex;
+}
+
+.margin-left20 {
+  margin-left: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: auto;
+}
